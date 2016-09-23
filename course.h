@@ -10,6 +10,12 @@ public:
 		requirements = {};
 		subject = "none";
 	};
+	Course(string name, int d, vector<int> requirements, string subject){
+		this->name = name;
+		this->id = id;
+		this->requirements = requirements;
+		this->subject = subject;
+	}
 	~Course(){};
 	string getName(){ return name; };
 	int getID(){ return id; };
