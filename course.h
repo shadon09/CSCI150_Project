@@ -10,7 +10,7 @@ public:
 		requirements = {};
 		subject = "none";
 	};
-	Course(string name, int d, vector<int> requirements, string subject){
+	Course(string name, int id, vector<int> requirements, string subject){
 		this->name = name;
 		this->id = id;
 		this->requirements = requirements;
