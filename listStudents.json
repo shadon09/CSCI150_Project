@@ -1,0 +1,71 @@
+[
+    {
+        "courses": [
+            {
+                "id": 3,
+                "name": "Csci 1",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 3,
+                "name": "Csci 5",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 3,
+                "name": "Csci 40",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 3,
+                "name": "Csci 41",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 4,
+                "name": "Csci 112",
+                "requirements": [
+                    2,
+                    3,
+                    7
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 4,
+                "name": "Csci 113",
+                "requirements": [
+                    2,
+                    3,
+                    7
+                ],
+                "subject": "Computer Science"
+            }
+        ],
+        "first": "adam",
+        "id": 10102321,
+        "last": "Castillo",
+        "major": "Computer Science",
+        "minor": "N/A"
+    }
+]
