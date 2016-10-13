@@ -59,7 +59,7 @@ void fileops::loadStudent(vector<Student> &profiles){
 		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"], j[i]["courses"][m]["requirements"],j[i]["courses"][m]["subject"]);
 		tp.push_back(temp); 
 		}
-	Student temp(j[i]["first"],j[i]["last"],j[i]["id"],j[i]["major"],j[i]["minor"],tp);
+	Student temp(j[i]["first"],j[i]["last"],j[i]["id"],j[i]["major"],j[i]["minor"],tp,NULL);
 	profiles.push_back(temp);
 	}
 	

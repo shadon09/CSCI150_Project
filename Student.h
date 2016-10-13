@@ -18,9 +18,13 @@ private:
     vector<Course> coursesTaken;
 
 public:
-    Student(string first, string last, int idNum, string mainMajor, string secondMajor, vector<Course> ct);
-	~Student(){} 
-	int getID(){return id;}
+    Student *left;
+    Student *right;
+    Student *parent;
+    Student(string first, string last, int idNum, string mainMajor, string secondMajor, vector<Course> ct, Student *parent);
+    Student(){};
+	~Student(){}
+	int &getID(){return id;}
 	string getFirst(){return firstName;}
 	string getLast(){return lastName;}
 	string getMajor(){return major;}
@@ -31,7 +35,7 @@ public:
 
 };
 
-Student::Student(string first, string last, int idNum, string mainMajor, string secondMajor, vector<Course> ct )
+Student::Student(string first, string last, int idNum, string mainMajor, string secondMajor, vector<Course> ct, Student *parent )
 {
 	this->firstName = first;
     this->lastName = last;
@@ -39,6 +43,11 @@ Student::Student(string first, string last, int idNum, string mainMajor, string 
     this->major = mainMajor;
     this->minor = secondMajor;
 	this->coursesTaken = ct;
+	this->parent = parent;
+	left = NULL;
+	right = NULL;
+	parent = NULL;
+
 }
 
 // Initialize all the variables with either the user input or dummy file
