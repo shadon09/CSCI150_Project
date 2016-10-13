@@ -55,9 +55,8 @@
         "name": "Csci 101. Computational Foundations for Bioinformatics",
         "requirements": [
             1,
-            102
+            102 
         ],
         "subject": "Computer Science"
     }
-    
 ]
