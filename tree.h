@@ -39,7 +39,7 @@ public:
 };
     	//bool isBinaryTree(Student *s);
     	//void computeLeaf(Student *s, Student *p, int &count);
-    Student *lookup(Student *s,int idNum){
+    Student *findLevel(Student *s,int idNum){
 
     	//if comes across a dead end
     	if(s == NULL)
@@ -47,18 +47,14 @@ public:
     	//return the counted variable as level identifier
     	if(s->getID() == idNum)
         	return s;
-    	//use recursion to find the node on the left side
-    	Student *level = findLevel(s->left,idNum);
-    	if(level != NULL)
-        	return level;
-    	//use recursion to find the node on the right side
-    	Student *level2 = findLevel(s->right,idNum);
-    	//if node was found on both, check when the node came earlier
-    	if(level->getID() <= level2->getID())
-        	return level2;
-    	else return level;
+    	if(idNum < s->getID())
+        	findLevel(s->left, idNum);
+    	else if(idNum > s->getID())
+        	findLevel(s->right, idNum);
+	else
+		return NULL;
     };
-    Student *findLevel(Student *s,int idNum){
+    Student *lookup(Student *s,int idNum){
 
     	return findLevel(s,idNum);
     };

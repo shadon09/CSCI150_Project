@@ -12,7 +12,10 @@ students->put(students->getRoot(), "Matthew", "Morado", 108, "Computer Science",
 students->put(students->getRoot(), "Memes", "AreDead", 90, "Computer Science", "None",vector<Course>(),NULL);
 students->put(students->getRoot(), "I'm", "Saved", 201, "Computer Science", "None",vector<Course>(),NULL);
 students->put(students->getRoot(), "Please", "Work", 91, "Computer Science", "None",vector<Course>(),NULL);
-cout << students->getRoot()->left->getFirst() << endl;
+cout << students->getRoot()->right->getFirst() << endl;
+Student *look = students->lookup(students->getRoot(), 91);
+cout << look->getFirst() << endl;
+
 
 vector<Course> table;
 vector<Student> profiles;
