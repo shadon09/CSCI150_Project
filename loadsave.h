@@ -3,6 +3,7 @@
 #include "course.h"
 #include "json.hpp"
 #include "Student.h"
+#include "tree.h"
 //include -std=c++11 to compile 
   
 using json = nlohmann::json;
@@ -15,9 +16,13 @@ struct fileops{
 	void loadStudent(vector<Student> &table);
 	void saveCourse(vector<Course> table);
 	void saveStudent(vector<Student> table);
+	void loadStudentT(Tree **t);
+	void saveStudentT(Tree *t); 
+	void collectNode(Student *t, json &j);
 }; 
 
 ///////////////////      Load and Save for Courses   ////////////////////
+
 void fileops::loadCourse(vector<Course> &table){
 	ifstream ifs;
 	ifs.open("listCourses.json"); 
@@ -47,6 +52,57 @@ void fileops::saveCourse(vector<Course> table){
 ifs.close();
 }
 ////////////////////////// Load and Save for Students ////////////////////
+
+void fileops::loadStudentT(Tree **t){
+	ifstream ifs; 
+	ifs.open("listStudents.json");
+	json j;
+	ifs >> j;
+	for(int i = 0; i < j.size(); i++){
+	vector<Course> tp;
+		for(int m = 0; m < j[i]["courses"].size(); m++){
+		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"], j[i]["courses"][m]["requirements"],j[i]["courses"][m]["subject"]);
+		tp.push_back(temp); 
+		}
+	(*t)->put((*t)->getRoot(), j[i]["first"],j[i]["last"],j[i]["id"],j[i]["major"],j[i]["minor"],tp,NULL);
+	}
+	
+	ifs.close();
+	
+}
+void fileops::saveStudentT(Tree *t){
+		ofstream ifs;
+	ifs.open("listStudents.json");
+	json dataArr;  
+	collectNode(t->getRoot(),dataArr);
+	ifs << dataArr.dump(4);
+ifs.close();
+}
+void fileops::collectNode(Student *t, json &j){
+	
+		if (t == NULL)
+			return;
+		
+		collectNode(t->left,j);
+		json temp; 
+		temp["first"]    = t->getFirst(); 
+		temp["last"]     = t->getLast(); 
+		temp["id"]       = t->getID(); 
+		temp["major"]    = t->getMajor();
+		temp["minor"]    = t->getMinor();
+		for(int j = 0; j < t->getCt().size(); j++){
+			json tempv;
+			tempv["name"]          = (t->getCt())[j].getName();
+			tempv["subject"]       = (t->getCt())[j].getSubject();
+			tempv["id"]            = (t->getCt())[j].getID();
+			tempv["requirements"]  = (t->getCt())[j].getReq();
+			temp["courses"].push_back(tempv);         
+		}
+		j.push_back(temp); 
+		collectNode(t->right,j);
+}
+	
+
 
 void fileops::loadStudent(vector<Student> &profiles){
 	ifstream ifs; 
