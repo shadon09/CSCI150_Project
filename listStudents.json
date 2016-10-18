@@ -1,5 +1,40 @@
 [
     {
+        "first": "Memes",
+        "id": 90,
+        "last": "AreDead",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "Please",
+        "id": 91,
+        "last": "Work",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "Matthew",
+        "id": 108,
+        "last": "Morado",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "I'm",
+        "id": 201,
+        "last": "Saved",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "The",
+        "id": 564,
+        "last": "Best",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
         "courses": [
             {
                 "id": 3,
