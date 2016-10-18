@@ -62,8 +62,16 @@ public:
     //bool isCompleteTree(Student *s);
     //int treeHeight(Student *s);
     //int exponent(int x, int y);
-    //char Max(Student *s);
-    //char Min(Student *s);
+    Student *Max(Student *s){
+	if(s->right == NULL)
+		return s;
+	Max(s->right);
+    };
+    Student *Min(Student *s){
+	if(s->left == NULL)
+		return s;
+	Min(s->right);
+    };
     Student *getRoot(){return root;};
 
 private:
