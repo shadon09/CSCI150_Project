@@ -29,7 +29,7 @@ void fileops::loadCourse(vector<Course> &table){
 	json j;
 	ifs >> j;
 	for(int i = 0; i < j.size(); ++i){	
-	Course temp(j[i]["name"],j[i]["id"], j[i]["requirements"],j[i]["subject"]);  
+	Course temp(j[i]["name"],j[i]["id"], j[i]["requirements"],j[i]["start"],j[i]["end"],j[i]["subject"]);  
 	table.push_back(temp);  
 	}
 	ifs.close();
@@ -46,6 +46,8 @@ void fileops::saveCourse(vector<Course> table){
 		temp["name"]           = table[i].getName();
 		temp["subject"]        = table[i].getSubject();
 		temp["requirements"]   = table[i].getReq(); 
+		temp["start"]          = table[i].getStart();
+		temp["end"]            = table[i].getEnd(); 
 		dataArr.push_back(temp); 
 }
 	ifs << dataArr.dump(4);
@@ -61,7 +63,7 @@ void fileops::loadStudentT(Tree **t){
 	for(int i = 0; i < j.size(); i++){
 	vector<Course> tp;
 		for(int m = 0; m < j[i]["courses"].size(); m++){
-		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"], j[i]["courses"][m]["requirements"],j[i]["courses"][m]["subject"]);
+		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"],j[i]["courses"][m]["requirements"],j[i]["courses"][m]["start"],j[i]["courses"][m]["end"],j[i]["courses"][m]["subject"]);
 		tp.push_back(temp); 
 		}
 	(*t)->put((*t)->getRoot(), j[i]["first"],j[i]["last"],j[i]["id"],j[i]["major"],j[i]["minor"],tp,NULL);
@@ -112,7 +114,7 @@ void fileops::loadStudent(vector<Student> &profiles){
 	for(int i = 0; i < j.size(); i++){
 	vector<Course> tp;
 		for(int m = 0; m < j[i]["courses"].size(); m++){
-		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"], j[i]["courses"][m]["requirements"],j[i]["courses"][m]["subject"]);
+		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"], j[i]["courses"][m]["requirements"],j[i]["courses"][m]["start"], j[i]["courses"][m]["end"],j[i]["courses"][m]["subject"]);
 		tp.push_back(temp); 
 		}
 	Student temp(j[i]["first"],j[i]["last"],j[i]["id"],j[i]["major"],j[i]["minor"],tp,NULL);
