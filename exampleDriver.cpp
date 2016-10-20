@@ -17,6 +17,14 @@ void printTree(Student *tree){
 	printTree(tree->right);
 }
 
+/*vector<Course*> csciCourses(){
+	vector<Course*> courses;
+	courses.push_back(new Course("CSCI 40", 0001, {}, 8, 9, "CSCI"));
+	courses.push_back(new Course("CSCI 41", 0002, {0001}, 8, 9, "CSCI"));
+	courses.push_back(new Course("CSCI 60", 0003, {}, 8, 9, "CSCI"));
+	return courses;
+}*/
+
 int main(){
 
 Tree *students = new Tree();
