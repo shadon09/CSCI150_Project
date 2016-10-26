@@ -1,62 +1,122 @@
 [
     {
+        "days": {
+            "friday": true,
+            "monday": true,
+            "thursday": false,
+            "tuesday": false,
+            "wednesday": true
+        },
+        "end": 9,
         "id": 1,
-        "name": "Csci 1. Critical Thinking and Computer Science",
-        "requirements": [
-        ],
+        "name": "Csci 1",
+        "requirements": [],
+        "start": 8,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": true,
+            "monday": true,
+            "thursday": false,
+            "tuesday": false,
+            "wednesday": true
+        },
+        "end": 1,
         "id": 5,
-        "name": "Csci 5. Computer and Applications",
-        "requirements": [
-        ],
+        "name": "Csci 5",
+        "requirements": [],
+        "start": 12,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": true,
+            "monday": true,
+            "thursday": false,
+            "tuesday": false,
+            "wednesday": true
+        },
+        "end": 11,
         "id": 30,
-        "name": "Csci 30. Introdution to the Internet",
-        "requirements": [
-        ],
+        "name": "Csci 30",
+        "requirements": [],
+        "start": 10,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": false,
+            "monday": false,
+            "thursday": true,
+            "tuesday": true,
+            "wednesday": false
+        },
+        "end": 11,
         "id": 40,
-        "name": "Csci 40.Introduction to Programming and Problem Solving",
-        "requirements": [
-        ],
+        "name": "Csci 40",
+        "requirements": [],
+        "start": 10,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": false,
+            "monday": false,
+            "thursday": true,
+            "tuesday": true,
+            "wednesday": false
+        },
+        "end": 1,
         "id": 41,
-        "name": "Csci 41. Introduction to Data Structures",
-        "requirements": [
-		40
-        ],
+        "name": "Csci 41",
+        "requirements": [40],
+        "start": 11,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": true,
+            "monday": true,
+            "thursday": false,
+            "tuesday": false,
+            "wednesday": true
+        },
+        "end": 9,
         "id": 60,
-        "name": "Csci 60. Foundations of COmputer Science",
-        "requirements": [
-            40
-        ],
+        "name": "Csci 60",
+        "requirements": [40],
+        "start": 8,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": false,
+            "monday": false,
+            "thursday": true,
+            "tuesday": true,
+            "wednesday": false
+        },
+        "end": 3,
         "id": 100,
-        "name": "Csci 100. Introduction to Computational Science",
-        "requirements": [
-        ],
+        "name": "Csci 100",
+        "requirements": [],
+        "start": 2,
         "subject": "Computer Science"
     },
     {
+        "days": {
+            "friday": true,
+            "monday": true,
+            "thursday": false,
+            "tuesday": false,
+            "wednesday": true
+        },
+        "end": 4,
         "id": 101,
-        "name": "Csci 101. Computational Foundations for Bioinformatics",
-        "requirements": [
-            1,
-            102 
-        ],
+        "name": "Csci 101",
+        "requirements": [1,101],
+        "start": 3,
         "subject": "Computer Science"
     }
 ]

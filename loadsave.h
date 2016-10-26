@@ -28,9 +28,9 @@ void fileops::loadCourse(vector<Course> &table){
 	ifs.open("listCourses.json"); 
 	json j;
 	ifs >> j;
-	for(int i = 0; i < j.size(); ++i){	
+	for(int i = 0; i < j.size(); ++i){
 	Course temp(j[i]["name"],j[i]["id"], j[i]["requirements"],j[i]["start"],j[i]["end"],j[i]["subject"],j[i]["days"]);  
-	table.push_back(temp);  
+	table.push_back(temp);
 	}
 	ifs.close();
 }
@@ -63,10 +63,7 @@ void fileops::loadStudentT(Tree **t){
 	ifs >> j;
 	for(int i = 0; i < j.size(); i++){
 	vector<Course> tp;
-		for(int m = 0; m < j[i]["courses"].size(); m++){
-		Course temp(j[i]["courses"][m]["name"],j[i]["courses"][m]["id"],j[i]["courses"][m]["requirements"],j[i]["courses"][m]["start"],j[i]["courses"][m]["end"],j[i]["courses"][m]["subject"],j[i]["courses"][m]["days"]);
-		tp.push_back(temp); 
-		}
+	loadCourse(tp); 
 	(*t)->put((*t)->getRoot(), j[i]["first"],j[i]["last"],j[i]["id"],j[i]["major"],j[i]["minor"],tp,NULL);
 	}
 	
@@ -74,7 +71,7 @@ void fileops::loadStudentT(Tree **t){
 	
 }
 void fileops::saveStudentT(Tree *t){
-		ofstream ifs;
+	ofstream ifs;
 	ifs.open("listStudents.json");
 	json dataArr;  
 	collectNode(t->getRoot(),dataArr);
