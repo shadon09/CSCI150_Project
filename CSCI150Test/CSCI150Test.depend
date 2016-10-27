@@ -1,0 +1,113 @@
+# depslib dependency file v1.0
+1476230815 source:/home/matt/Documents/CSCI150/CSCI150_Project/exampleDriver.cpp
+	<iostream>
+	<vector>
+	"loadsave.h"
+	"tree.cpp"
+
+1476211479 /home/matt/Documents/CSCI150/CSCI150_Project/loadsave.h
+	<vector>
+	<fstream>
+	"course.h"
+	"json.hpp"
+	"Student.h"
+
+1475623814 /home/matt/Documents/CSCI150/CSCI150_Project/course.h
+	<string>
+	<vector>
+
+1475623814 /home/matt/Documents/CSCI150/CSCI150_Project/json.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<ciso646>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<functional>
+	<initializer_list>
+	<iomanip>
+	<iostream>
+	<iterator>
+	<limits>
+	<locale>
+	<map>
+	<memory>
+	<numeric>
+	<sstream>
+	<stdexcept>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+
+1476231283 /home/matt/Documents/CSCI150/CSCI150_Project/Student.h
+	<string>
+	<vector>
+
+1476231188 /home/matt/Documents/CSCI150/CSCI150_Project/tree.cpp
+	"tree.h"
+	<ctype.h>
+	<iostream>
+
+1476231248 /home/matt/Documents/CSCI150/CSCI150_Project/tree.h
+	<iostream>
+
+1476297210 source:/home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/exampleDriver.cpp
+	<iostream>
+	<vector>
+	"Student.h"
+	"loadsave.h"
+	"tree.cpp"
+
+1476297244 /home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/loadsave.h
+	<vector>
+	<fstream>
+	"json.hpp"
+
+1475623814 /home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/course.h
+	<string>
+	<vector>
+
+1475623814 /home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/json.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<ciso646>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<functional>
+	<initializer_list>
+	<iomanip>
+	<iostream>
+	<iterator>
+	<limits>
+	<locale>
+	<map>
+	<memory>
+	<numeric>
+	<sstream>
+	<stdexcept>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
+
+1476297244 /home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/Student.h
+	<string>
+	<vector>
+	"course.h"
+
+1476231188 /home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/tree.cpp
+	"tree.h"
+	<ctype.h>
+	<iostream>
+
+1476297354 /home/matt/Documents/CSCI150/CSCI150_Project/CSCI150Test/tree.h
+	<iostream>
+

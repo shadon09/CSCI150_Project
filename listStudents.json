@@ -1,0 +1,106 @@
+[
+    {
+        "first": "Memes",
+        "id": 90,
+        "last": "AreDead",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "Please",
+        "id": 91,
+        "last": "Work",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "Matthew",
+        "id": 108,
+        "last": "Morado",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "I'm",
+        "id": 201,
+        "last": "Saved",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "first": "The",
+        "id": 564,
+        "last": "Best",
+        "major": "Computer Science",
+        "minor": "None"
+    },
+    {
+        "courses": [
+            {
+                "id": 3,
+                "name": "Csci 1",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 3,
+                "name": "Csci 5",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 3,
+                "name": "Csci 40",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 3,
+                "name": "Csci 41",
+                "requirements": [
+                    1,
+                    2,
+                    3
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 4,
+                "name": "Csci 112",
+                "requirements": [
+                    2,
+                    3,
+                    7
+                ],
+                "subject": "Computer Science"
+            },
+            {
+                "id": 4,
+                "name": "Csci 113",
+                "requirements": [
+                    2,
+                    3,
+                    7
+                ],
+                "subject": "Computer Science"
+            }
+        ],
+        "first": "adam",
+        "id": 10102321,
+        "last": "Castillo",
+        "major": "Computer Science",
+        "minor": "N/A"
+    }
+]
